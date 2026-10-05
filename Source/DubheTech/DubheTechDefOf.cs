@@ -19,5 +19,15 @@ public static class DubheTechDefOf
     /// </summary>
     public static ThingDef DubheTech_Magnet;
 
+    /// <summary>
+    /// 输电杆：与切比雪夫距离 24 格内的其他输电杆无线互联，组成跨区域的统一电网。
+    /// </summary>
+    public static ThingDef DubheTech_TransmissionPole;
+
+    /// <summary>
+    /// 远程输电杆：与切比雪夫距离 48 格内的其他输电杆无线互联，组成跨区域的统一电网。
+    /// </summary>
+    public static ThingDef DubheTech_RemoteTransmissionPole;
+
     static DubheTechDefOf() => DefOfHelper.EnsureInitializedInCtor(typeof(DubheTechDefOf));
 }

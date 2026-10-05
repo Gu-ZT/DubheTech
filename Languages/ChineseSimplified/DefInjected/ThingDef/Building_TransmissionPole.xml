@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+	<DubheTech_TransmissionPole.label>输电杆</DubheTech_TransmissionPole.label>
+	<DubheTech_TransmissionPole.description>以磁电核心驱动的输电杆，可与 24 格内的其他输电杆无线互联，跨越间隙输送电力。6 格内的用电设备会直接接入电杆，无需铺设电缆。</DubheTech_TransmissionPole.description>
+
+	<DubheTech_RemoteTransmissionPole.label>远程输电杆</DubheTech_RemoteTransmissionPole.label>
+	<DubheTech_RemoteTransmissionPole.description>以成对磁电核心驱动的高耸输电杆，可与 48 格内的其他输电杆无线互联，跨越间隙输送电力。6 格内的用电设备会直接接入电杆，无需铺设电缆。</DubheTech_RemoteTransmissionPole.description>
+
+</LanguageData>
