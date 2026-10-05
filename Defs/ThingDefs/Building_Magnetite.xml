@@ -7,7 +7,9 @@
 		<description>A naturally magnetic iron ore. Mine it to obtain magnets.</description>
 		<graphicData>
 			<texPath>Things/Building/Natural/DubheTech/magnetite_ore</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
+			<graphicClass>Graphic_Linked</graphicClass>
+			<linkType>Basic</linkType>
+			<linkFlags>Rock</linkFlags>
 		</graphicData>
 		<statBases>
 			<MaxHitPoints>1000</MaxHitPoints>
