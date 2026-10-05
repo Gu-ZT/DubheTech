@@ -6,8 +6,8 @@
 		<label>DubheTech</label>
 		<description>The foundation of DubheTech: taming the sky begins with mastering lightning. Unlocks the lightning rod.</description>
 		<baseCost>1000</baseCost>
-		<!-- 设为 Tribal 使部落开局同样只需 1000 点，不触发跨科技等级的双倍成本 -->
-		<techLevel>Tribal</techLevel>
+		<!-- 部落开局的派系科技等级为 Neolithic；项目设为同级可避免跨科技等级的双倍成本 -->
+		<techLevel>Neolithic</techLevel>
 		<requiredResearchBuilding>SimpleResearchBench</requiredResearchBuilding>
 		<researchViewX>0.5</researchViewX>
 		<researchViewY>1.5</researchViewY>

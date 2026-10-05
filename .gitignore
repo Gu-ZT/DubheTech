@@ -2,10 +2,12 @@
 [Bb]in/
 [Oo]bj/
 /Assemblies/
+Dist/
 
 # IDE
 .vs/
 .idea/
+.dsh/
 *.user
 *.suo
 
