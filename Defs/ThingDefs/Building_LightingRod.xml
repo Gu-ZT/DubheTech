@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<ThingDef ParentName="BuildingBase">
+		<defName>DubheTech_LightingRod</defName>
+		<label>lightning rod</label>
+		<description>A grounded steel mast that draws lightning strikes within a radius of 110 cells onto itself, protecting everything around it.</description>
+		<graphicData>
+			<texPath>Things/Building/DubheTech/lighting_rod</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<costList>
+			<Steel>2</Steel>
+		</costList>
+		<altitudeLayer>Building</altitudeLayer>
+		<designationCategory>Misc</designationCategory>
+		<statBases>
+			<WorkToBuild>100</WorkToBuild>
+			<MaxHitPoints>120</MaxHitPoints>
+			<Flammability>0</Flammability>
+		</statBases>
+		<size>(1,1)</size>
+		<passability>PassThroughOnly</passability>
+		<blockLight>false</blockLight>
+	</ThingDef>
+
+</Defs>
