@@ -43,3 +43,8 @@ dotnet build Source/DubheTech.sln -c Release
 ```
 
 The compiled `DubheTech.dll` is written directly to `Assemblies/`. To develop in-game, symlink or copy this repository into RimWorld's `Mods` folder.
+
+## License
+
+- **Source code** (C# under `Source/`) and **XML definitions** (`Defs/`, `Patches/`, `About/About.xml`, etc.) are licensed under the [GNU LGPL-3.0](LICENSE).
+- **Asset files** (`About/*.png`, `Textures/`, `Sounds/`, `Languages/`, and other artistic/audio/textual content) are **All Rights Reserved** — see [LICENSE-ASSETS](LICENSE-ASSETS).

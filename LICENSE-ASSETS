@@ -1,0 +1,51 @@
+天枢科技 DubheTech —— 资源文件许可声明
+Asset License Notice for DubheTech
+
+====================================================================
+
+本仓库中的资源文件（Asset Files）采用「保留所有权利」（All Rights
+Reserved）许可，不适用根目录 LICENSE 文件中的 GNU LGPL-3.0。
+
+资源文件包括但不限于：
+
+  - About/ModIcon.png、About/Preview.png 等图像文件
+  - Textures/ 目录下的全部贴图资源
+  - Sounds/ 目录下的全部音频资源
+  - Languages/ 目录下的翻译文本
+  - 其他任何美术、音频、文本类创作内容
+
+Copyright (C) DubheTech Team. All rights reserved.
+
+未经版权持有者书面许可，不得对上述资源文件进行复制、修改、再分发
+或用于本 Mod 以外的任何用途。
+
+====================================================================
+
+The asset files in this repository are licensed as "All Rights
+Reserved" and are NOT covered by the GNU LGPL-3.0 in the root LICENSE
+file.
+
+Asset files include, but are not limited to:
+
+  - Image files such as About/ModIcon.png and About/Preview.png
+  - All texture assets under Textures/
+  - All audio assets under Sounds/
+  - Translation texts under Languages/
+  - Any other artistic, audio, or textual creative content
+
+Copyright (C) DubheTech Team. All rights reserved.
+
+No part of these assets may be copied, modified, redistributed, or
+used for any purpose other than this mod without the written
+permission of the copyright holder.
+
+====================================================================
+
+注：本声明仅适用于资源文件。仓库中的源代码（Source/ 下的 C# 代码）
+与 XML 定义（Defs/、Patches/、About/About.xml 等）仍按 GNU LGPL-3.0
+许可授权，详见根目录 LICENSE 文件。
+
+Note: This notice applies to asset files only. The source code (C#
+under Source/) and XML definitions (Defs/, Patches/, About/About.xml,
+etc.) remain licensed under the GNU LGPL-3.0; see the root LICENSE
+file.

@@ -43,3 +43,8 @@ dotnet build Source/DubheTech.sln -c Release
 ```
 
 编译产物 `DubheTech.dll` 会直接输出到 `Assemblies/` 目录。开发调试时，将本仓库符号链接或复制到 RimWorld 的 `Mods` 目录即可在游戏内加载。
+
+## 许可协议
+
+- **源代码**（`Source/` 下的 C# 代码）与 **XML 定义**（`Defs/`、`Patches/`、`About/About.xml` 等）采用 [GNU LGPL-3.0](LICENSE) 许可。
+- **资源文件**（`About/*.png`、`Textures/`、`Sounds/`、`Languages/` 及其他美术、音频、文本类创作内容）**保留所有权利**（All Rights Reserved），详见 [LICENSE-ASSETS](LICENSE-ASSETS)。
