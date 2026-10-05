@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net472</TargetFramework>
+		<LangVersion>latest</LangVersion>
+		<AssemblyName>DubheTech</AssemblyName>
+		<RootNamespace>DubheTech</RootNamespace>
+		<Version>0.1.0</Version>
+		<!-- 编译产物直接输出到 Mod 标准的 Assemblies 目录 -->
+		<OutputPath>..\..\Assemblies\</OutputPath>
+		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+		<Deterministic>true</Deterministic>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)' == 'Release'">
+		<DebugType>none</DebugType>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<!-- RimWorld 1.6 引用程序集（仅编译期签名引用，不复制游戏文件） -->
+		<PackageReference Include="Krafs.Rimworld.Ref" Version="1.6.4871" />
+		<!-- Harmony 运行时由游戏内 Harmony Mod 提供，此处仅编译期引用 -->
+		<PackageReference Include="Lib.Harmony" Version="2.4.2" ExcludeAssets="runtime" />
+		<!-- 允许在未安装 .NET Framework 目标包的环境（如 CI）中编译 net472 -->
+		<PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.3" PrivateAssets="all" />
+	</ItemGroup>
+
+</Project>
