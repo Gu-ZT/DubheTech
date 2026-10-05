@@ -14,6 +14,9 @@
 		</costList>
 		<altitudeLayer>Building</altitudeLayer>
 		<designationCategory>Misc</designationCategory>
+		<researchPrerequisites>
+			<li>DubheTech_Base</li>
+		</researchPrerequisites>
 		<statBases>
 			<WorkToBuild>100</WorkToBuild>
 			<MaxHitPoints>120</MaxHitPoints>
