@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<ThingDef ParentName="ResourceBase">
+		<defName>DubheTech_Magnet</defName>
+		<label>magnet</label>
+		<description>A magnet refined from magnetite ore. Can be smelted back into steel, or used as the base material of DubheTech devices.</description>
+		<graphicData>
+			<texPath>Things/Item/DubheTech/magnet</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>1.9</MarketValue>
+			<MaxHitPoints>60</MaxHitPoints>
+			<Flammability>0</Flammability>
+		</statBases>
+		<thingCategories>
+			<li>ResourcesRaw</li>
+		</thingCategories>
+	</ThingDef>
+
+	<ThingDef ParentName="ResourceBase">
+		<defName>DubheTech_MagnetoCore</defName>
+		<label>magneto core</label>
+		<description>A precision assembly of magnets, steel and industrial components. Harnesses the magnetoelectric effect to power DubheTech devices.</description>
+		<graphicData>
+			<texPath>Things/Item/DubheTech/magneto_core</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>60</MarketValue>
+			<MaxHitPoints>80</MaxHitPoints>
+			<Flammability>0</Flammability>
+		</statBases>
+		<thingCategories>
+			<li>Manufactured</li>
+		</thingCategories>
+	</ThingDef>
+
+</Defs>

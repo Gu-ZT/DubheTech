@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<ThingDef ParentName="MineableBase">
+		<defName>DubheTech_MineableMagnetite</defName>
+		<label>magnetite ore</label>
+		<description>A naturally magnetic iron ore. Mine it to obtain magnets.</description>
+		<graphicData>
+			<texPath>Things/Building/Natural/DubheTech/magnetite_ore</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<MaxHitPoints>1000</MaxHitPoints>
+		</statBases>
+		<building>
+			<mineableThing>DubheTech_Magnet</mineableThing>
+			<mineableYield>25</mineableYield>
+			<isResourceRock>true</isResourceRock>
+			<mineableScatterCommonality>0.5</mineableScatterCommonality>
+			<mineableScatterLumpSizeRange>4~8</mineableScatterLumpSizeRange>
+			<claimable>false</claimable>
+		</building>
+	</ThingDef>
+
+</Defs>

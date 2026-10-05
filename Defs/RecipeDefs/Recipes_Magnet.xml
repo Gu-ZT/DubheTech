@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<RecipeDef>
+		<defName>DubheTech_SmeltMagnet</defName>
+		<label>smelt magnet into steel</label>
+		<description>Smelt a magnet down into usable steel.</description>
+		<jobString>Smelting magnet.</jobString>
+		<workAmount>400</workAmount>
+		<workSpeedStat>SmeltingSpeed</workSpeedStat>
+		<effectWorking>Smelt</effectWorking>
+		<soundWorking>Recipe_Smelt</soundWorking>
+		<recipeUsers>
+			<li>ElectricSmelter</li>
+		</recipeUsers>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>DubheTech_Magnet</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>DubheTech_Magnet</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Steel>1</Steel>
+		</products>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>DubheTech_MakeMagnetoCore</defName>
+		<label>make magneto core</label>
+		<description>Assemble magnets, steel and a component into a magneto core.</description>
+		<jobString>Making magneto core.</jobString>
+		<workAmount>2000</workAmount>
+		<workSkill>Crafting</workSkill>
+		<effectWorking>Machining</effectWorking>
+		<soundWorking>Recipe_Machining</soundWorking>
+		<recipeUsers>
+			<li>TableMachining</li>
+		</recipeUsers>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>DubheTech_Magnet</li>
+					</thingDefs>
+				</filter>
+				<count>2</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>4</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ComponentIndustrial</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>DubheTech_Magnet</li>
+				<li>Steel</li>
+				<li>ComponentIndustrial</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<DubheTech_MagnetoCore>1</DubheTech_MagnetoCore>
+		</products>
+	</RecipeDef>
+
+</Defs>

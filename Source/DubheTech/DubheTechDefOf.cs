@@ -14,5 +14,10 @@ public static class DubheTechDefOf
     /// </summary>
     public static ThingDef DubheTech_LightingRod;
 
+    /// <summary>
+    /// 磁铁物品：雷击附近的钢铁会磁化而成，也可开采磁铁矿获得。
+    /// </summary>
+    public static ThingDef DubheTech_Magnet;
+
     static DubheTechDefOf() => DefOfHelper.EnsureInitializedInCtor(typeof(DubheTechDefOf));
 }

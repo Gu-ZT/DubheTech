@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+	<DubheTech_SmeltMagnet.label>冶炼磁铁为钢铁</DubheTech_SmeltMagnet.label>
+	<DubheTech_SmeltMagnet.jobString>正在冶炼磁铁。</DubheTech_SmeltMagnet.jobString>
+	<DubheTech_SmeltMagnet.description>将磁铁回炉冶炼成可用的钢铁。</DubheTech_SmeltMagnet.description>
+
+	<DubheTech_MakeMagnetoCore.label>制造磁电核心</DubheTech_MakeMagnetoCore.label>
+	<DubheTech_MakeMagnetoCore.jobString>正在制造磁电核心。</DubheTech_MakeMagnetoCore.jobString>
+	<DubheTech_MakeMagnetoCore.description>将磁铁、钢铁与一个零部件组装成磁电核心。</DubheTech_MakeMagnetoCore.description>
+
+</LanguageData>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+	<DubheTech_MineableMagnetite.label>磁铁矿</DubheTech_MineableMagnetite.label>
+	<DubheTech_MineableMagnetite.description>一种天然磁性铁矿石，开采后可获得磁铁。</DubheTech_MineableMagnetite.description>
+
+	<DubheTech_Magnet.label>磁铁</DubheTech_Magnet.label>
+	<DubheTech_Magnet.description>从磁铁矿中提炼出的磁体。可以回炉冶炼成钢铁，也是天枢科技设备的基础材料。</DubheTech_Magnet.description>
+
+	<DubheTech_MagnetoCore.label>磁电核心</DubheTech_MagnetoCore.label>
+	<DubheTech_MagnetoCore.description>由磁铁、钢铁与零部件精密组装而成的核心部件，利用磁电效应驱动天枢科技的设备。</DubheTech_MagnetoCore.description>
+
+</LanguageData>
