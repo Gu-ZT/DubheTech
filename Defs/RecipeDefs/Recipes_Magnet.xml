@@ -40,7 +40,8 @@
 		<jobString>Making magneto core.</jobString>
 		<workAmount>2000</workAmount>
 		<workSkill>Crafting</workSkill>
-		<effectWorking>Machining</effectWorking>
+		<!-- 1.6 没有 Machining 特效，原版零部件配方同样使用 Cook -->
+		<effectWorking>Cook</effectWorking>
 		<soundWorking>Recipe_Machining</soundWorking>
 		<recipeUsers>
 			<li>TableMachining</li>

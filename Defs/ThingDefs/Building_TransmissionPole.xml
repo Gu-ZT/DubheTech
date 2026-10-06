@@ -9,6 +9,8 @@
 			<texPath>Things/Building/DubheTech/transmission_pole</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>(1,2)</drawSize>
+			<!-- 贴图底部与放置格对齐：上移超出一格部分的一半 -->
+			<drawOffset>(0,0,0.5)</drawOffset>
 		</graphicData>
 		<costList>
 			<DubheTech_MagnetoCore>1</DubheTech_MagnetoCore>
@@ -44,6 +46,8 @@
 			<texPath>Things/Building/DubheTech/remote_transmission_pole</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<drawSize>(1,3)</drawSize>
+			<!-- 贴图底部与放置格对齐：上移超出一格部分的一半 -->
+			<drawOffset>(0,0,1)</drawOffset>
 		</graphicData>
 		<costList>
 			<DubheTech_MagnetoCore>2</DubheTech_MagnetoCore>

@@ -9,8 +9,9 @@
 		<!-- 部落开局的派系科技等级为 Neolithic；项目设为同级可避免跨科技等级的双倍成本 -->
 		<techLevel>Neolithic</techLevel>
 		<requiredResearchBuilding>SimpleResearchBench</requiredResearchBuilding>
-		<researchViewX>0.5</researchViewX>
-		<researchViewY>1.5</researchViewY>
+		<!-- 与岩石切割、干肉饼同行，该位置在原版节点网格中为空位 -->
+		<researchViewX>2</researchViewX>
+		<researchViewY>1.4</researchViewY>
 	</ResearchProjectDef>
 
 </Defs>

@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-	<ThingDef ParentName="MineableBase">
+	<ThingDef ParentName="RockBase">
 		<defName>DubheTech_MineableMagnetite</defName>
 		<label>magnetite ore</label>
 		<description>A naturally magnetic iron ore. Mine it to obtain magnets.</description>
+		<!-- 与原版矿石一致：共用 RockFlecked 图集并着色，链接样式从 RockBase 继承 -->
 		<graphicData>
-			<texPath>Things/Building/Natural/DubheTech/magnetite_ore</texPath>
-			<graphicClass>Graphic_Linked</graphicClass>
-			<linkType>Basic</linkType>
-			<linkFlags>Rock</linkFlags>
+			<texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<color>(85,82,88)</color>
+			<colorTwo>(110,115,130)</colorTwo>
 		</graphicData>
 		<statBases>
 			<MaxHitPoints>1000</MaxHitPoints>
