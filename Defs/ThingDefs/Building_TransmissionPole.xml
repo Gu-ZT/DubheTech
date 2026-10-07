@@ -16,8 +16,8 @@
 			<DubheTech_MagnetoCore>1</DubheTech_MagnetoCore>
 			<Steel>8</Steel>
 		</costList>
-		<!-- 高层建筑高度层：杆体贴图向上伸出数格，需盖住同层树木，与原版宽幅护盾投影塔一致 -->
-		<altitudeLayer>BuildingOnTop</altitudeLayer>
+		<!-- 杆体贴图向上伸出数格，需压过同层树木与更高层的地面物品（Item 层），同时保持在站立小人（Pawn 层）之下 -->
+		<altitudeLayer>Projectile</altitudeLayer>
 		<designationCategory>Power</designationCategory>
 		<researchPrerequisites>
 			<li>DubheTech_Base</li>
@@ -55,8 +55,8 @@
 			<DubheTech_MagnetoCore>2</DubheTech_MagnetoCore>
 			<Steel>24</Steel>
 		</costList>
-		<!-- 高层建筑高度层：杆体贴图向上伸出数格，需盖住同层树木，与原版宽幅护盾投影塔一致 -->
-		<altitudeLayer>BuildingOnTop</altitudeLayer>
+		<!-- 杆体贴图向上伸出数格，需压过同层树木与更高层的地面物品（Item 层），同时保持在站立小人（Pawn 层）之下 -->
+		<altitudeLayer>Projectile</altitudeLayer>
 		<designationCategory>Power</designationCategory>
 		<researchPrerequisites>
 			<li>DubheTech_Base</li>
