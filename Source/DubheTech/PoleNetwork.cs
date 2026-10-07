@@ -11,6 +11,7 @@ namespace DubheTech;
 /// 既是无线输电补丁的链路依据，也直接绘制为两根杆头部之间的电线。
 /// 输电杆生成或拆除时标记重建，绘制与电网泛洪读取的是同一份缓存。
 /// </summary>
+[StaticConstructorOnStartup]
 public class PoleNetwork : MapComponent
 {
     private const float WireWidth = 0.1f;

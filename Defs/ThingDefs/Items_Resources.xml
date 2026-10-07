@@ -13,6 +13,7 @@
 			<MarketValue>1.9</MarketValue>
 			<MaxHitPoints>60</MaxHitPoints>
 			<Flammability>0</Flammability>
+			<Mass>0.6</Mass>
 		</statBases>
 		<thingCategories>
 			<li>ResourcesRaw</li>
@@ -31,6 +32,7 @@
 			<MarketValue>60</MarketValue>
 			<MaxHitPoints>80</MaxHitPoints>
 			<Flammability>0</Flammability>
+			<Mass>1.5</Mass>
 		</statBases>
 		<thingCategories>
 			<li>Manufactured</li>
