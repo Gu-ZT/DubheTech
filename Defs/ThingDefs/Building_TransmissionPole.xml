@@ -37,10 +37,10 @@
 				<radius>24</radius>
 				<wireConnectHeight>1.3</wireConnectHeight>
 			</li>
-			<!-- 杆顶的小范围照明，与电线辉光同色 -->
+			<!-- 杆顶照明：半径与亮度均约为火把（10 格 / (184,136,83)）的一半，蓝色调与电线辉光一致 -->
 			<li Class="CompProperties_Glower">
-				<glowRadius>4</glowRadius>
-				<glowColor>(140,180,255,0)</glowColor>
+				<glowRadius>5</glowRadius>
+				<glowColor>(60,75,105,0)</glowColor>
 			</li>
 		</comps>
 	</ThingDef>
@@ -81,10 +81,10 @@
 				<radius>48</radius>
 				<wireConnectHeight>1.9</wireConnectHeight>
 			</li>
-			<!-- 杆顶的小范围照明，与电线辉光同色 -->
+			<!-- 杆顶照明：半径与亮度均约为火把（10 格 / (184,136,83)）的一半，蓝色调与电线辉光一致 -->
 			<li Class="CompProperties_Glower">
-				<glowRadius>5</glowRadius>
-				<glowColor>(140,180,255,0)</glowColor>
+				<glowRadius>6</glowRadius>
+				<glowColor>(60,75,105,0)</glowColor>
 			</li>
 		</comps>
 	</ThingDef>
