@@ -16,8 +16,9 @@ public class PoleNetwork : MapComponent
 {
     private const float WireWidth = 0.1f;
 
+    // 加色发光着色器使电线呈现辉光：颜色越亮叠加越明显
     private static readonly Material WireMaterial =
-        MaterialPool.MatFrom(BaseContent.WhiteTex, ShaderDatabase.Transparent, new Color32(0x66, 0xcc, 0xff, 0x88));
+        MaterialPool.MatFrom(BaseContent.WhiteTex, ShaderDatabase.MoteGlow, new Color32(0x66, 0xcc, 0xff, 0x88));
     private static readonly List<Building> NoLinks = new();
 
     private readonly List<(Building a, Building b)> links = new();

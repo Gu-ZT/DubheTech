@@ -37,6 +37,11 @@
 				<radius>24</radius>
 				<wireConnectHeight>1.3</wireConnectHeight>
 			</li>
+			<!-- 杆顶的小范围照明，与电线辉光同色 -->
+			<li Class="CompProperties_Glower">
+				<glowRadius>4</glowRadius>
+				<glowColor>(140,180,255,0)</glowColor>
+			</li>
 		</comps>
 	</ThingDef>
 
@@ -75,6 +80,11 @@
 				<transmitsPower>true</transmitsPower>
 				<radius>48</radius>
 				<wireConnectHeight>1.9</wireConnectHeight>
+			</li>
+			<!-- 杆顶的小范围照明，与电线辉光同色 -->
+			<li Class="CompProperties_Glower">
+				<glowRadius>5</glowRadius>
+				<glowColor>(140,180,255,0)</glowColor>
 			</li>
 		</comps>
 	</ThingDef>
