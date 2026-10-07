@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+	<DubheTech_TeslaShock.label>电击</DubheTech_TeslaShock.label>
+	<DubheTech_TeslaShock.deathMessage>{0} 被电死了。</DubheTech_TeslaShock.deathMessage>
+
+</LanguageData>

@@ -29,5 +29,15 @@ public static class DubheTechDefOf
     /// </summary>
     public static ThingDef DubheTech_RemoteTransmissionPole;
 
+    /// <summary>
+    /// 特斯拉塔：以闪电攻击范围内的目标，邻近的特斯拉塔会互相充能增强伤害。
+    /// </summary>
+    public static ThingDef DubheTech_TeslaTower;
+
+    /// <summary>
+    /// 电击伤害：特斯拉塔的闪电攻击造成的伤害类型，表现为烧伤。
+    /// </summary>
+    public static DamageDef DubheTech_TeslaShock;
+
     static DubheTechDefOf() => DefOfHelper.EnsureInitializedInCtor(typeof(DubheTechDefOf));
 }

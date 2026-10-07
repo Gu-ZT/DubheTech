@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<!-- 特斯拉塔闪电攻击的伤害类型：表现为烧伤，但不会点燃目标 -->
+	<DamageDef>
+		<defName>DubheTech_TeslaShock</defName>
+		<label>tesla shock</label>
+		<workerClass>DamageWorker_AddInjury</workerClass>
+		<externalViolence>true</externalViolence>
+		<deathMessage>{0} has been electrocuted.</deathMessage>
+		<hediff>Burn</hediff>
+		<harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+	</DamageDef>
+
+</Defs>

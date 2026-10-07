@@ -3,4 +3,14 @@
 
 	<DubheTech_WirelessTransmitterStats>无线输电距离：{0} 格；已互联输电杆：{1}</DubheTech_WirelessTransmitterStats>
 
+	<DubheTech_TeslaFilterGizmo>筛选攻击目标</DubheTech_TeslaFilterGizmo>
+	<DubheTech_TeslaFilterGizmoDesc>选择这座特斯拉塔允许攻击的目标类别。</DubheTech_TeslaFilterGizmoDesc>
+	<DubheTech_TeslaFilterTitle>攻击目标筛选</DubheTech_TeslaFilterTitle>
+	<DubheTech_TeslaFilter_HostileCharacter>敌对角色（敌对派系的人类）</DubheTech_TeslaFilter_HostileCharacter>
+	<DubheTech_TeslaFilter_HostileMechanoid>敌对机械体</DubheTech_TeslaFilter_HostileMechanoid>
+	<DubheTech_TeslaFilter_HostileAnimal>敌对生物（含发狂动物与虫类）</DubheTech_TeslaFilter_HostileAnimal>
+	<DubheTech_TeslaFilter_WildAnimal>非敌对的野生动物</DubheTech_TeslaFilter_WildAnimal>
+	<DubheTech_TeslaFilter_NonHostileCharacter>非敌对角色（殖民者、盟友、商队、囚犯等）</DubheTech_TeslaFilter_NonHostileCharacter>
+	<DubheTech_TeslaFilterNote>敌对关系以本塔所属派系为准；殖民地的动物始终不会成为目标。</DubheTech_TeslaFilterNote>
+
 </LanguageData>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<ThingDef ParentName="BuildingBase">
+		<defName>DubheTech_TeslaTower</defName>
+		<label>tesla tower</label>
+		<description>A magneto-core tower that hurls lightning at targets within 20 cells. When several tesla towers stand within 16 cells of each other, the rest channel charge into the firing tower — and charge each other in turn — amplifying the bolt. Its targets can be filtered per tower.</description>
+		<thingClass>DubheTech.Tesla.TeslaTower</thingClass>
+		<graphicData>
+			<texPath>Things/Building/DubheTech/tesla_tower</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1,2)</drawSize>
+			<!-- 贴图底部与放置格对齐：上移超出一格部分的一半 -->
+			<drawOffset>(0,0,0.5)</drawOffset>
+		</graphicData>
+		<costList>
+			<DubheTech_MagnetoCore>2</DubheTech_MagnetoCore>
+			<Steel>40</Steel>
+			<ComponentIndustrial>4</ComponentIndustrial>
+		</costList>
+		<!-- 塔身贴图向上伸出数格，需压过同层树木与更高层的地面物品（Item 层），同时保持在站立小人（Pawn 层）之下 -->
+		<altitudeLayer>Projectile</altitudeLayer>
+		<designationCategory>Security</designationCategory>
+		<researchPrerequisites>
+			<li>DubheTech_Base</li>
+		</researchPrerequisites>
+		<statBases>
+			<WorkToBuild>1500</WorkToBuild>
+			<MaxHitPoints>250</MaxHitPoints>
+			<Flammability>0</Flammability>
+		</statBases>
+		<size>(1,1)</size>
+		<passability>PassThroughOnly</passability>
+		<blockLight>false</blockLight>
+		<comps>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>400</basePowerConsumption>
+			</li>
+		</comps>
+		<modExtensions>
+			<li Class="DubheTech.Tesla.TeslaTowerSettings">
+				<attackRange>20</attackRange>
+				<chargeRadius>16</chargeRadius>
+				<cooldownTicks>150</cooldownTicks>
+				<baseDamage>15</baseDamage>
+				<damagePerCharge>5</damagePerCharge>
+				<!-- 贴图中发光球体的中心高度，闪电从这里发出 -->
+				<headHeight>1.25</headHeight>
+			</li>
+		</modExtensions>
+	</ThingDef>
+
+</Defs>

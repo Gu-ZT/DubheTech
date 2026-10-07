@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+	<DubheTech_TeslaTower.label>特斯拉塔</DubheTech_TeslaTower.label>
+	<DubheTech_TeslaTower.description>以磁电核心驱动的防御塔，会向 20 格内的目标释放闪电。当 16 格内存有多座特斯拉塔时，其它特斯拉塔会为开火的特斯拉塔充能——充能塔自身也会受到邻近塔的充能加成——从而放大闪电的威力。可在每座塔上筛选允许攻击的目标类别。</DubheTech_TeslaTower.description>
+
+</LanguageData>

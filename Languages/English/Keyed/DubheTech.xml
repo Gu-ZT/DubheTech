@@ -3,4 +3,14 @@
 
 	<DubheTech_WirelessTransmitterStats>wireless range: {0} cells; linked poles: {1}</DubheTech_WirelessTransmitterStats>
 
+	<DubheTech_TeslaFilterGizmo>Filter targets</DubheTech_TeslaFilterGizmo>
+	<DubheTech_TeslaFilterGizmoDesc>Choose which target categories this tesla tower may attack.</DubheTech_TeslaFilterGizmoDesc>
+	<DubheTech_TeslaFilterTitle>Target filter</DubheTech_TeslaFilterTitle>
+	<DubheTech_TeslaFilter_HostileCharacter>Hostile characters (hostile-faction humans)</DubheTech_TeslaFilter_HostileCharacter>
+	<DubheTech_TeslaFilter_HostileMechanoid>Hostile mechanoids</DubheTech_TeslaFilter_HostileMechanoid>
+	<DubheTech_TeslaFilter_HostileAnimal>Hostile creatures (incl. manhunter animals and insects)</DubheTech_TeslaFilter_HostileAnimal>
+	<DubheTech_TeslaFilter_WildAnimal>Non-hostile wild animals</DubheTech_TeslaFilter_WildAnimal>
+	<DubheTech_TeslaFilter_NonHostileCharacter>Non-hostile characters (colonists, allies, traders, prisoners)</DubheTech_TeslaFilter_NonHostileCharacter>
+	<DubheTech_TeslaFilterNote>Hostility is judged against this tower's faction; colony animals are never targeted.</DubheTech_TeslaFilterNote>
+
 </LanguageData>
