@@ -15,6 +15,9 @@ public class CompWirelessTransmitter : CompPowerTransmitter
     /// <summary>本杆的无线互联距离（切比雪夫距离，格）。</summary>
     public int Radius => ((CompProperties_WirelessTransmitter)props).radius;
 
+    /// <summary>电线连接点高出杆放置格中心的高度（格）。</summary>
+    public float WireConnectHeight => ((CompProperties_WirelessTransmitter)props).wireConnectHeight;
+
     /// <summary>
     /// 判断本杆能否与另一根输电杆无线互联：两杆位置的切比雪夫距离不超过两者互联距离的较大值。
     /// </summary>

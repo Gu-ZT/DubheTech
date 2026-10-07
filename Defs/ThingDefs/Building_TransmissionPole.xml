@@ -16,7 +16,8 @@
 			<DubheTech_MagnetoCore>1</DubheTech_MagnetoCore>
 			<Steel>8</Steel>
 		</costList>
-		<altitudeLayer>Building</altitudeLayer>
+		<!-- 高层建筑高度层：杆体贴图向上伸出数格，需盖住同层树木，与原版宽幅护盾投影塔一致 -->
+		<altitudeLayer>BuildingOnTop</altitudeLayer>
 		<designationCategory>Power</designationCategory>
 		<researchPrerequisites>
 			<li>DubheTech_Base</li>
@@ -34,6 +35,7 @@
 				<compClass>DubheTech.Comps.CompWirelessTransmitter</compClass>
 				<transmitsPower>true</transmitsPower>
 				<radius>24</radius>
+				<wireConnectHeight>1.3</wireConnectHeight>
 			</li>
 		</comps>
 	</ThingDef>
@@ -53,7 +55,8 @@
 			<DubheTech_MagnetoCore>2</DubheTech_MagnetoCore>
 			<Steel>24</Steel>
 		</costList>
-		<altitudeLayer>Building</altitudeLayer>
+		<!-- 高层建筑高度层：杆体贴图向上伸出数格，需盖住同层树木，与原版宽幅护盾投影塔一致 -->
+		<altitudeLayer>BuildingOnTop</altitudeLayer>
 		<designationCategory>Power</designationCategory>
 		<researchPrerequisites>
 			<li>DubheTech_Base</li>
@@ -71,6 +74,7 @@
 				<compClass>DubheTech.Comps.CompWirelessTransmitter</compClass>
 				<transmitsPower>true</transmitsPower>
 				<radius>48</radius>
+				<wireConnectHeight>1.9</wireConnectHeight>
 			</li>
 		</comps>
 	</ThingDef>

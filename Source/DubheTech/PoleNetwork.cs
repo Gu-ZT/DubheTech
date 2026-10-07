@@ -15,11 +15,9 @@ namespace DubheTech;
 public class PoleNetwork : MapComponent
 {
     private const float WireWidth = 0.1f;
-    /// <summary>电线端点在杆贴图高度上的占比：杆头蓝色部分位于贴图顶端附近。</summary>
-    private const float HeadHeightFraction = 0.9f;
 
     private static readonly Material WireMaterial =
-        SolidColorMaterials.SimpleSolidColorMaterial(new Color(0.13f, 0.13f, 0.16f), false);
+        MaterialPool.MatFrom(BaseContent.WhiteTex, ShaderDatabase.Transparent, new Color32(0x66, 0xcc, 0xff, 0x88));
     private static readonly List<Building> NoLinks = new();
 
     private readonly List<(Building a, Building b)> links = new();
@@ -85,14 +83,12 @@ public class PoleNetwork : MapComponent
     }
 
     /// <summary>
-    /// 杆头蓝色部分的世界坐标：贴图底部与放置格对齐，图形中心为 DrawPos + drawOffset，
-    /// 头部约在贴图高度的九成处。
+    /// 电线连接点的世界坐标：以杆放置格中心为基准，按杆类型配置的高度抬升。
     /// </summary>
     private static Vector3 HeadPosition(Building pole, float altitude)
     {
-        GraphicData data = pole.def.graphicData;
         Vector3 center = pole.DrawPos;
-        float headZ = center.z + data.drawOffset.z + data.drawSize.y * (HeadHeightFraction - 0.5f);
+        float headZ = center.z + pole.GetComp<CompWirelessTransmitter>().WireConnectHeight;
         return new Vector3(center.x, altitude, headZ);
     }
 }
