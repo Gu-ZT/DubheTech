@@ -25,7 +25,7 @@ public class TeslaTowerSettings : DefModExtension
     /// <summary>每级充能额外增加的伤害。</summary>
     public float damagePerCharge = 5f;
 
-    /// <summary>塔头发球点高出放置格中心的高度（格）。</summary>
+    /// <summary>塔头放电点高出放置格中心的高度（格）。</summary>
     public float headHeight = 1.25f;
 
     /// <summary>闪电特效的基础线宽。</summary>

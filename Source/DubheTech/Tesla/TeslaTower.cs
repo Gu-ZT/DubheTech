@@ -144,10 +144,7 @@ public class TeslaTower : Building
     {
         foreach (Thing thing in Map.listerThings.ThingsOfDef(DubheTechDefOf.DubheTech_TeslaTower))
         {
-            if (thing.Spawned)
-            {
-                yield return (TeslaTower)thing;
-            }
+            yield return (TeslaTower)thing;
         }
     }
 

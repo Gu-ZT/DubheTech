@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-	<!-- 特斯拉塔闪电攻击的伤害类型：表现为烧伤，但不会点燃目标 -->
+	<!-- 特斯拉塔闪电攻击的伤害类型：表现为烧伤，但不会点燃目标；不设 armorCategory，电弧无视护甲 -->
 	<DamageDef>
 		<defName>DubheTech_TeslaShock</defName>
 		<label>tesla shock</label>
