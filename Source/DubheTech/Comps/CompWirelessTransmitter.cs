@@ -33,6 +33,7 @@ public class CompWirelessTransmitter : CompPowerTransmitter
         // 读档时全部电网都会在建筑生成完毕后统一重建，无需逐杆通知
         if (!respawningAfterLoad)
         {
+            PoleNetwork.MarkDirty(parent.Map);
             RefreshLinkedPoles(parent.Map);
         }
     }
@@ -43,6 +44,7 @@ public class CompWirelessTransmitter : CompPowerTransmitter
         // 与原版 PostDeSpawn 的跳过条件保持一致：被新蓝图原位替换时电网本就无需重建
         if (mode != DestroyMode.WillReplace || parent.BeingTransportedOnGravship)
         {
+            PoleNetwork.MarkDirty(map);
             RefreshLinkedPoles(map);
         }
     }

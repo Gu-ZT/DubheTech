@@ -9,7 +9,8 @@ namespace DubheTech.Patches;
 
 /// <summary>
 /// 无线输电链路补丁：在原版电网泛洪（仅沿贴邻的输电建筑扩散）的结果之上，
-/// 把与网内输电杆无线互联的杆、以及从这些杆出发按原版贴邻规则可达的输电建筑一并并入电网。
+/// 把与网内输电杆有连线（PoleNetwork 三角化链路）的杆、以及从这些杆出发按原版贴邻规则
+/// 可达的输电建筑一并并入电网。
 /// 必须补丁私有方法的原因：电网拓扑的唯一收口是 PowerNetMaker.ContiguousPowerBuildings，
 /// 调用链上的 PowerNetManager.TryCreateNetAt / TryDestroyNetAt 等同样均为私有，
 /// 经反编译确认不存在任何可供扩展电网拓扑的公共入口点。
@@ -27,15 +28,16 @@ public static class WirelessPowerLink
         }
         HashSet<Building> inNet = new HashSet<Building>(__result.Select(c => (Building)c.parent));
         HashSet<Building> poleSet = new HashSet<Building>(poles);
+        PoleNetwork network = map.GetComponent<PoleNetwork>();
         // 只有输电杆能产生无线链路，主队列只需携带杆；普通输电建筑无需参与链路发现
         Queue<Building> queue = new Queue<Building>(poles.Where(inNet.Contains));
         bool expanded = false;
         while (queue.Count > 0)
         {
-            CompWirelessTransmitter wireless = queue.Dequeue().GetComp<CompWirelessTransmitter>();
-            foreach (Building pole in poles)
+            Building current = queue.Dequeue();
+            foreach (Building pole in network.LinkedPoles(current))
             {
-                if (!inNet.Contains(pole) && wireless.LinksTo(pole.GetComp<CompWirelessTransmitter>()))
+                if (!inNet.Contains(pole))
                 {
                     Absorb(pole, map, inNet, queue, poleSet);
                     expanded = true;
