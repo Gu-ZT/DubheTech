@@ -14,8 +14,8 @@ public class TeslaBoltRenderer : MapComponent
     private const int BoltSegments = 8;
     private const int FlickerIntervalTicks = 3;
 
-    private static readonly Material BoltMaterial =
-        MaterialPool.MatFrom(BaseContent.WhiteTex, ShaderDatabase.MoteGlow, new Color(0.55f, 0.8f, 1f));
+    // 复用原版雷击的材质（游戏资源包内的 Weather/LightningBolt），让闪电呈现与落雷一致的纹理
+    private static readonly Material BoltMaterial = MatLoader.LoadMat("Weather/LightningBolt");
 
     private readonly List<Bolt> bolts = new();
 
@@ -24,6 +24,7 @@ public class TeslaBoltRenderer : MapComponent
         public Vector3 from;
         public Vector3 to;
         public float width;
+        public int startTick;
         public int expireTick;
         public int seed;
     }
@@ -43,6 +44,7 @@ public class TeslaBoltRenderer : MapComponent
             from = from,
             to = to,
             width = settings.boltWidthBase + settings.boltWidthPerCharge * chargeLevel,
+            startTick = Find.TickManager.TicksGame,
             expireTick = Find.TickManager.TicksGame + settings.boltDurationTicks,
             seed = Rand.Int
         });
@@ -81,6 +83,9 @@ public class TeslaBoltRenderer : MapComponent
         }
         // 垂直于闪电方向的横向偏移轴，锯齿只在这个方向上展开
         Vector2 perpendicular = new(-dz / length, dx / length);
+        // 亮度随存活时间衰减，模拟落雷的闪光淡出
+        float brightness = (float)(bolt.expireTick - now) / (bolt.expireTick - bolt.startTick);
+        Material material = FadedMaterialPool.FadedVersionOf(BoltMaterial, brightness);
         Rand.PushState(bolt.seed + now / FlickerIntervalTicks);
         try
         {
@@ -97,7 +102,7 @@ public class TeslaBoltRenderer : MapComponent
                     point.x += perpendicular.x * offset;
                     point.z += perpendicular.y * offset;
                 }
-                GenDraw.DrawLineBetween(previous, point, BoltMaterial, bolt.width);
+                GenDraw.DrawLineBetween(previous, point, material, bolt.width);
                 previous = point;
             }
         }
