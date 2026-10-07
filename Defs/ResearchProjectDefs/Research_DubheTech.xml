@@ -4,7 +4,7 @@
 	<ResearchProjectDef>
 		<defName>DubheTech_Base</defName>
 		<label>DubheTech</label>
-		<description>The foundation of DubheTech: taming the sky begins with mastering lightning. Unlocks the lightning rod.</description>
+		<description>The foundation of DubheTech: taming the sky begins with mastering lightning. Unlocks the lightning rod and transmission poles.</description>
 		<baseCost>1000</baseCost>
 		<!-- 部落开局的派系科技等级为 Neolithic；项目设为同级可避免跨科技等级的双倍成本 -->
 		<techLevel>Neolithic</techLevel>
