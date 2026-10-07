@@ -14,32 +14,15 @@ env:
   CSPROJ: Source/DubheTech/DubheTech.csproj
 
 jobs:
-  quality:
-    name: Build check
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v5
-      - uses: actions/setup-dotnet@v4
-        with:
-          dotnet-version: "8.0.x"
-          cache: true
-          cache-dependency-path: ${{ env.CSPROJ }}
-      - name: Build (Release)
-        run: dotnet build Source/DubheTech.sln -c Release
-
-  release:
-    name: Package and publish
-    needs: quality
-    if: github.event_name == 'push'
+  build:
+    name: Build and package
     runs-on: ubuntu-latest
     outputs:
       version: ${{ steps.version.outputs.version }}
       tag: ${{ steps.version.outputs.tag }}
+      prerelease: ${{ steps.version.outputs.prerelease }}
     steps:
       - uses: actions/checkout@v5
-        with:
-          # 更新日志需要完整提交历史与已有 tag
-          fetch-depth: 0
       - uses: actions/setup-dotnet@v4
         with:
           dotnet-version: "8.0.x"
@@ -55,6 +38,7 @@ jobs:
             tag="$GITHUB_REF_NAME"
             prerelease=false
           else
+            # PR 与手动触发的构建同样走 snapshot 版本号，仅用于标识构建产物
             version="${base}+snapshot.${GITHUB_RUN_NUMBER}"
             tag="v${version}"
             prerelease=true
@@ -62,7 +46,6 @@ jobs:
           echo "version=$version" >> "$GITHUB_OUTPUT"
           echo "tag=$tag" >> "$GITHUB_OUTPUT"
           echo "prerelease=$prerelease" >> "$GITHUB_OUTPUT"
-          echo "base=$base" >> "$GITHUB_OUTPUT"
 
       - name: Build with resolved version
         run: dotnet build Source/DubheTech.sln -c Release -p:Version="${{ steps.version.outputs.version }}"
@@ -83,10 +66,27 @@ jobs:
           path: DubheTech-v${{ steps.version.outputs.version }}.zip
           if-no-files-found: error
 
+  release:
+    name: Publish release
+    needs: build
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          # 更新日志需要完整提交历史与已有 tag
+          fetch-depth: 0
+      - name: Download packaged zip
+        uses: actions/download-artifact@v4
+        with:
+          name: DubheTech-v${{ needs.build.outputs.version }}
+
       - name: Collect commit changelog
+        env:
+          VERSION: ${{ needs.build.outputs.version }}
+          TAG: ${{ needs.build.outputs.tag }}
         run: |
-          tag="${{ steps.version.outputs.tag }}"
-          prev=$(git tag -l 'v*' --sort=-creatordate | grep -vx "$tag" | head -1 || true)
+          prev=$(git tag -l 'v*' --sort=-creatordate | grep -vx "$TAG" | head -1 || true)
           if [ -n "$prev" ]; then
             range="$prev..HEAD"
           else
@@ -100,35 +100,36 @@ jobs:
             echo
             echo "## 文件"
             echo
-            echo "- [DubheTech-v${{ steps.version.outputs.version }}.zip](https://github.com/${GITHUB_REPOSITORY}/releases/download/${tag}/DubheTech-v${{ steps.version.outputs.version }}.zip)"
+            echo "- [DubheTech-v${VERSION}.zip](https://github.com/${GITHUB_REPOSITORY}/releases/download/${TAG}/DubheTech-v${VERSION}.zip)"
           } > notes.md
 
       - name: Create or update GitHub release
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          VERSION: ${{ needs.build.outputs.version }}
+          TAG: ${{ needs.build.outputs.tag }}
+          PRERELEASE: ${{ needs.build.outputs.prerelease }}
         run: |
-          tag="${{ steps.version.outputs.tag }}"
-          zip="DubheTech-v${{ steps.version.outputs.version }}.zip"
-          prerelease="${{ steps.version.outputs.prerelease }}"
-          args=(--title "$tag" --notes-file notes.md)
-          if [ "$prerelease" = "true" ]; then
+          zip="DubheTech-v${VERSION}.zip"
+          args=(--title "$TAG" --notes-file notes.md)
+          if [ "$PRERELEASE" = "true" ]; then
             args+=(--prerelease)
           fi
-          if gh release view "$tag" > /dev/null 2>&1; then
+          if gh release view "$TAG" > /dev/null 2>&1; then
             # 同一次运行重试：tag 由 run number 决定，必然唯一，直接覆盖附件与说明
-            gh release upload "$tag" "$zip" --clobber
-            gh release edit "$tag" "${args[@]}"
+            gh release upload "$TAG" "$zip" --clobber
+            gh release edit "$TAG" "${args[@]}"
           else
-            if [ "$prerelease" = "true" ]; then
+            if [ "$PRERELEASE" = "true" ]; then
               # 分支构建的 tag 尚不存在，显式指向本次提交的 sha
               args+=(--target "$GITHUB_SHA")
             fi
-            gh release create "$tag" "$zip" "${args[@]}"
+            gh release create "$TAG" "$zip" "${args[@]}"
           fi
 
   dump-version:
     name: Dump version into project
-    needs: release
+    needs: [build, release]
     if: github.event_name == 'push' && github.ref_type == 'tag'
     runs-on: ubuntu-latest
     steps:
@@ -138,14 +139,14 @@ jobs:
           ref: main
       - name: Write tag version into csproj
         run: |
-          version="${{ needs.release.outputs.version }}"
+          version="${{ needs.build.outputs.version }}"
           sed -i "s|<Version>[^<]*</Version>|<Version>${version}</Version>|" "$CSPROJ"
           grep -oP '(?<=<Version>)[^<]+' "$CSPROJ"
       - name: Commit and push version
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          version="${{ needs.release.outputs.version }}"
+          version="${{ needs.build.outputs.version }}"
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add "$CSPROJ"
