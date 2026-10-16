@@ -4,6 +4,9 @@
 /Assemblies/
 Dist/
 
+# 本地临时工作区（游戏程序集反编译、一次性验证工程等）
+/.tmp/
+
 # IDE
 .vs/
 .idea/
