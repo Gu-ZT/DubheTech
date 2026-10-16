@@ -4,7 +4,7 @@
 
 # 天枢科技 DubheTech
 
-**A technology expansion mod for RimWorld 1.6, named after Dubhe, the first star of the Big Dipper.**
+**A technology expansion mod for RimWorld 1.7, named after Dubhe, the first star of the Big Dipper.**
 
 English | [简体中文](README.zh_CN.md)
 
@@ -16,7 +16,7 @@ DubheTech (天枢科技) is a technology expansion mod for RimWorld. It brings a
 
 - Website: <https://rimworld.dubhe.dev>
 - Package ID: `dubhe.dubhetech`
-- Supported game version: **1.6**
+- Supported game version: **1.7**
 
 ## Dependencies
 
@@ -31,12 +31,12 @@ Defs/        XML Defs (buildings, items, research, ...)
 Patches/     XML PatchOperations for other mods
 Languages/   Translations (ChineseSimplified / English keyed & def-injected)
 Textures/    Texture assets
-Source/      C# source (SDK-style csproj, .NET Framework 4.7.2)
+Source/      C# source (SDK-style csproj, .NET 10)
 ```
 
 ## Build
 
-Requires any .NET SDK capable of building `net472` (the build uses [Krafs.Rimworld.Ref](https://www.nuget.org/packages/Krafs.Rimworld.Ref) reference assemblies, so a local RimWorld installation is **not** needed):
+Requires the .NET 10 SDK (the build uses [Krafs.Rimworld.Ref](https://www.nuget.org/packages/Krafs.Rimworld.Ref) reference assemblies, so a local RimWorld installation is **not** needed):
 
 ```powershell
 dotnet build Source/DubheTech.sln -c Release

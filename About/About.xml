@@ -5,7 +5,7 @@
 	<author>DubheTech Team</author>
 	<url>https://rimworld.dubhe.dev</url>
 	<supportedVersions>
-		<li>1.6</li>
+		<li>1.7</li>
 	</supportedVersions>
 	<modDependencies>
 		<li>
@@ -18,11 +18,11 @@
 	<loadAfter>
 		<li>brrainz.harmony</li>
 	</loadAfter>
-	<description>天枢科技（DubheTech）—— 面向 RimWorld 1.6 的科技扩展 Mod。
+	<description>天枢科技（DubheTech）—— 面向 RimWorld 1.7 的科技扩展 Mod。
 
 以北斗之首「天枢」为名，为边缘世界带来全新的科技树与工业体系。
 
-DubheTech is a technology expansion mod for RimWorld 1.6, named after Dubhe, the first star of the Big Dipper.
+DubheTech is a technology expansion mod for RimWorld 1.7, named after Dubhe, the first star of the Big Dipper.
 
 官网 / Website: https://rimworld.dubhe.dev</description>
 </ModMetaData>

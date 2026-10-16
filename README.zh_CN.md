@@ -4,7 +4,7 @@
 
 # 天枢科技 DubheTech
 
-**以北斗之首「天枢」为名的 RimWorld 1.6 科技扩展 Mod。**
+**以北斗之首「天枢」为名的 RimWorld 1.7 科技扩展 Mod。**
 
 [English](README.md) | 简体中文
 
@@ -16,7 +16,7 @@
 
 - 官网：<https://rimworld.dubhe.dev>
 - Package ID：`dubhe.dubhetech`
-- 支持游戏版本：**1.6**
+- 支持游戏版本：**1.7**
 
 ## 前置依赖
 
@@ -31,12 +31,12 @@ Defs/        XML Def 定义（建筑、物品、研究项目等）
 Patches/     针对其他 Mod 的 XML PatchOperation 补丁
 Languages/   翻译文件（ChineseSimplified / English 的 Keyed 与 DefInjected）
 Textures/    贴图资源
-Source/      C# 源码（SDK 风格 csproj，.NET Framework 4.7.2）
+Source/      C# 源码（SDK 风格 csproj，.NET 10）
 ```
 
 ## 构建
 
-需要任意支持编译 `net472` 的 .NET SDK。项目通过 [Krafs.Rimworld.Ref](https://www.nuget.org/packages/Krafs.Rimworld.Ref) 引用程序集编译，因此**无需**本机安装 RimWorld：
+需要 .NET 10 SDK。项目通过 [Krafs.Rimworld.Ref](https://www.nuget.org/packages/Krafs.Rimworld.Ref) 引用程序集编译，因此**无需**本机安装 RimWorld：
 
 ```powershell
 dotnet build Source/DubheTech.sln -c Release
