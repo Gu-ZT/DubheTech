@@ -30,6 +30,10 @@
 			<Flammability>0</Flammability>
 		</statBases>
 		<size>(1,1)</size>
+		<!-- 塔身朝向固定，不提供旋转 -->
+		<rotatable>false</rotatable>
+		<!-- 索敌、开火与冷却都在 Tick() 中推进，ThingDef 默认 Never 会使 Tick() 永不被调用 -->
+		<tickerType>Normal</tickerType>
 		<passability>PassThroughOnly</passability>
 		<blockLight>false</blockLight>
 		<comps>

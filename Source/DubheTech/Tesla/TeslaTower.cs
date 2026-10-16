@@ -182,6 +182,8 @@ public class TeslaTower : Building
             defaultLabel = "DubheTech_TeslaFilterGizmo".Translate(),
             defaultDesc = "DubheTech_TeslaFilterGizmoDesc".Translate(),
             icon = (Texture2D)Graphic.MatSingle.mainTexture,
+            // 贴图远高于宽，按 1:1 塞进方形按钮会被横向拉宽
+            iconProportions = Graphic.drawSize,
             action = () => Find.WindowStack.Add(new DialogTeslaTargetFilter(this))
         };
     }

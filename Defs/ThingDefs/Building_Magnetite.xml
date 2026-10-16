@@ -22,6 +22,8 @@
 			<isResourceRock>true</isResourceRock>
 			<mineableScatterCommonality>0.5</mineableScatterCommonality>
 			<mineableScatterLumpSizeRange>4~8</mineableScatterLumpSizeRange>
+			<!-- 与原版矿石一致：允许用「标记矿脉开采」按整条矿脉一次性指派 -->
+			<veinMineable>true</veinMineable>
 			<claimable>false</claimable>
 		</building>
 	</ThingDef>
