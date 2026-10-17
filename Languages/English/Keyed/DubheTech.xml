@@ -3,6 +3,8 @@
 
 	<DubheTech_WirelessTransmitterStats>wireless range: {0} cells; linked poles: {1}</DubheTech_WirelessTransmitterStats>
 
+	<DubheTech_ShowPoleWiresToggle>Show pole wires</DubheTech_ShowPoleWiresToggle>
+
 	<DubheTech_TeslaFilterGizmo>Filter targets</DubheTech_TeslaFilterGizmo>
 	<DubheTech_TeslaFilterGizmoDesc>Choose which target categories this tesla tower may attack.</DubheTech_TeslaFilterGizmoDesc>
 	<DubheTech_TeslaFilterTitle>Target filter</DubheTech_TeslaFilterTitle>

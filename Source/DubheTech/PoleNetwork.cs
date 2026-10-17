@@ -41,13 +41,21 @@ public class PoleNetwork : MapComponent
 
     public override void MapComponentUpdate()
     {
+        // 拓扑缓存须无条件重建：电网泛洪读取的正是 EnsureLinks 填充的结果，不可因开关跳过
         EnsureLinks();
+        if (!ShowWires)
+        {
+            return;
+        }
         float altitude = Altitudes.AltitudeFor(AltitudeLayer.MoteOverhead);
         foreach ((Building a, Building b) in links)
         {
             GenDraw.DrawLineBetween(HeadPosition(a, altitude), HeadPosition(b, altitude), WireMaterial, WireWidth);
         }
     }
+
+    /// <summary>电线是否绘制，不影响链路与电网。</summary>
+    private static bool ShowWires => Current.Game.GetComponent<DubheTechSettings>().showPoleWires;
 
     private void EnsureLinks()
     {

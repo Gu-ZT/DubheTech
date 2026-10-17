@@ -3,6 +3,8 @@
 
 	<DubheTech_WirelessTransmitterStats>无线输电距离：{0} 格；已互联输电杆：{1}</DubheTech_WirelessTransmitterStats>
 
+	<DubheTech_ShowPoleWiresToggle>显示输电杆电线</DubheTech_ShowPoleWiresToggle>
+
 	<DubheTech_TeslaFilterGizmo>筛选攻击目标</DubheTech_TeslaFilterGizmo>
 	<DubheTech_TeslaFilterGizmoDesc>选择这座特斯拉塔允许攻击的目标类别。</DubheTech_TeslaFilterGizmoDesc>
 	<DubheTech_TeslaFilterTitle>攻击目标筛选</DubheTech_TeslaFilterTitle>
